@@ -3,6 +3,7 @@ const { request, response } = require('@persea/persea');
 const { query, transaction } = require('../../db');
 const { getAuthenticatedUser } = require('../../authentication');
 
+// TODO rename /invite
 module.exports.create = async () => {
     const user = await getAuthenticatedUser();
 
