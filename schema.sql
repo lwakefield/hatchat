@@ -30,5 +30,6 @@ create table messages (
     "fromUserId" uuid references users,
     payload jsonb not null
 );
+create index on messages ("createdAt");
 
 commit;
