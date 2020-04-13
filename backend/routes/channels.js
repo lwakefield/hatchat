@@ -24,7 +24,7 @@ module.exports.create = async () => {
             (SELECT id FROM users WHERE username='system'),
             jsonb_build_object(
                 'message',
-                'user ' || ${user.id} || ' has subscribed to the channel'
+                'user ' || ${user.id} || ' has joined the channel'
             )
         )
     `;

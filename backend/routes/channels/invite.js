@@ -3,7 +3,6 @@ const { request, response } = require('@persea/persea');
 const { query, transaction } = require('../../db');
 const { getAuthenticatedUser } = require('../../authentication');
 
-// TODO rename /invite
 module.exports.create = async () => {
     const user = await getAuthenticatedUser();
 
@@ -44,7 +43,7 @@ module.exports.create = async () => {
                     (SELECT id FROM users WHERE username='system'),
                     jsonb_build_object(
                         'message',
-                        'user ' || ${user.id} || ' has subscribed to the channel'
+                        'user ' || ${user.id} || ' has joined the channel'
                     )
                 )
             `;

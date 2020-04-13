@@ -40,7 +40,7 @@ Hatch@ exposes the following endpoints. All HTTP endpoints expect `Content-Type:
 
 `GET /channels` shows a user which channels they are a member of.
 
-`POST /subscribe` subscribes a user to a channel, the invite must match the `inviteModel`.
+`POST /invite` invites a user to a channel, the invite must match the `inviteModel`.
 - `channelId` id of channel
 - `userId` uuid string
 

@@ -115,7 +115,7 @@ export async function sendMessage (message) {
 
 export async function joinChannel (channelId) {
     const { user } = store.getState();
-    await fetch('/api/channels/subscribe', {
+    await fetch('/api/channels/invite', {
         method: 'POST',
         headers: { authorization: await generateToken() },
         body: JSON.stringify({ channelId, userId: user.id }),
